@@ -4,12 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - ".github/workflows/newsletter-service.yml"
+      - ".github/workflows/newsletter-receptor.yml"
       - "newsletter-service/**"
   pull_request:
     branches: [main]
     paths:
-      - "newsletter-service/**"
+      - "newsletter-receptor/**"
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./newsletter-service
+        working-directory: ./newsletter-receptor
 
     steps:
       - uses: actions/checkout@v3
@@ -39,7 +39,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     defaults:
       run:
-        working-directory: ./newsletter-service
+        working-directory: ./newsletter-receptor
 
     steps:
       - uses: actions/checkout@v3

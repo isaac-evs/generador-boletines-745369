@@ -4,12 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - ".github/workflows/newsletter-viewer.yml"
+      - ".github/workflows/newsletter-service.yml"
       - "newsletter-service/**"
   pull_request:
     branches: [main]
     paths:
       - "newsletter-service/**"
+  workflow_dispatch:
 
 jobs:
   build:
